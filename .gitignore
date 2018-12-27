@@ -7,7 +7,6 @@
 /.idea/
 .idea
 /*.iml
-build/
 /out/
 .DS_Store
 .java-version
