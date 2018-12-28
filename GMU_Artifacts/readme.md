@@ -27,7 +27,6 @@ In order to manage the dependency mappings, create a mappings output file for ta
 
 `./GatewayMigrationUtility.sh manageMappings --bundle sample_api_migrate/gw-1/bundles/gw1.out.migration-demo.xml --type SSG_KEY_ENTRY --action IGNORE  --outputFile sample_api_migrate/gw-1/mappings/gw1.gw2.migration-demo.mappings.xml`
 
-`./GatewayMigrationUtility.sh manageMappings --bundle sample_api_migrate/gw-1/bundles/gw1.out.migration-demo.xml --type CLUSTER_PROPERTY --action NewOrExisting  --outputFile sample_api_migrate/gw-1/mappings/gw1.gw2.migration-demo.mappings.xml`
 
 ## Migrate In to the new environment: (--test)
 
