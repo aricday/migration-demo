@@ -9,8 +9,8 @@ To initialize the *skeleton project* as a starting point for this demo, we alter
 
 See more detail on using the gateway-developer-plugin here: [gateway-developer-plugin](https://github.com/ca-api-gateway/gateway-developer-plugin/wiki)
 
-# Start this demo.
-Put a valid gateway license in the `docker` folder. The license file should be called `license.xml`. For information on getting a license see the [License Section from the Gateway Container readme](https://hub.docker.com/r/caapim/gateway/).
+# Start with local developer build - Folder/Service/ClustProp/Policy
+This demo flow begins with an API developer working on a local docker (v9.4 SSG) image using Gradle developer plugin
 
 ## Running the Solution
 In order to run the solution you need to do the following:
@@ -38,14 +38,16 @@ To stop the running Gateway Container, run the following command:
 
 `docker-compose down --volumes`
 
-
 ## License
-
 Copyright (c) 2018 CA. All rights reserved.
 
 This software may be modified and distributed under the terms
 of the MIT license. See the [LICENSE][license-link] file for details.
 
-
  [license-link]: /LICENSE
- [contributing]: /CONTRIBUTING.md
+
+# Migrate bundle into Enterprise Mainline using Gateway Migration Utility
+This demo flow continues with the API developer migrating into Dev/QA pipeline (v9.3 SSG) using [GMU][gmu-readme]
+
+ [gmu-readme]: /GMU_Artifacts/readme.md
+### [GMU README](/GMU_Artifacts/readme.md)
