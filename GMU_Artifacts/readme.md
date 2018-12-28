@@ -19,7 +19,7 @@ This will export any changes to the sample migration bundle.
 ## Externalize the variables with the values from the exported policy xml using the TEMPLATE command
 In order to package the environment variables into property templates that can be applied to the CA API Gateway environments
 
-`./GatewayMigrationUtility.sh template --bundle sample_api_migrate/gw-1/bundles/gw1.out.migration-demo.xml --template sample_api_migrate/gw-1/templates/gw1.migration-demo.properties`
+`./GatewayMigrationUtility.sh template --bundle sample_api_migrate/gw-1/bundles/gw1.out.migration-demo.xml --template sample_api_migrate/gw-1/env_properties/gw1.migration-demo.properties`
    - *NOTE: This will create the template environment properties file with the key / value pair having variable names and corresponding values, and the values in the file can be modified with specific environment properties.*
 
 ## Manage Mappings:
@@ -31,5 +31,5 @@ In order to manage the dependency mappings, create a mappings output file for ta
 
 ## Migrate In to the new environment: (--test)
 
-`./GatewayMigrationUtility.sh migrateIn -z sample_api_migrate/gw-2/argfiles/mag.gateway.properties --template sample_api_migrate/gw-1/templates/gw1.sample-folder.properties --bundle sample_api_migrate/gw-1/bundles/gw1.out.sample-folder.xml  --map sample_api_migrate/gw-1/mappings/gw1.gw2.sample-folder.mappings.xml --test`
+`./GatewayMigrationUtility.sh migrateIn -z sample_api_migrate/gw-2/argfiles/mag.gateway.properties --template sample_api_migrate/gw-1/env_properties/gw1.migration-demo.properties --bundle sample_api_migrate/gw-1/bundles/gw1.out.migration-demo.xml  --map sample_api_migrate/gw-1/mappings/gw1.gw2.migration-demo.mappings.xml --test`
 
