@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<l7:Mappings xmlns:l7="http://ns.l7tech.com/2010/04/gateway-management">
+    <l7:Mapping action="Ignore" srcId="00000000000000000000000000000002:cloud.gateway.hormel.day.apim.ca.com" srcUri="https://172.31.15.119:8443/restman/1.0/privateKeys/00000000000000000000000000000002:cloud.gateway.hormel.day.apim.ca.com" type="SSG_KEY_ENTRY"/>
+</l7:Mappings>
