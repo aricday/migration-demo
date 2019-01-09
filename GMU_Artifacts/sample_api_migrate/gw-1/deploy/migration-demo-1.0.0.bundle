@@ -12,21 +12,21 @@
         </l7:Item>
         <l7:Item>
             <l7:Name>migration-demo</l7:Name>
-            <l7:Id>3a8b3080d27c18e68d3b48ce223f6f11</l7:Id>
+            <l7:Id>fc15349f7ea56c3d5f0fca3662500cc3</l7:Id>
             <l7:Type>FOLDER</l7:Type>
             <l7:Resource>
-                <l7:Folder folderId="0000000000000000ffffffffffffec76" id="3a8b3080d27c18e68d3b48ce223f6f11">
+                <l7:Folder folderId="0000000000000000ffffffffffffec76" id="fc15349f7ea56c3d5f0fca3662500cc3">
                     <l7:Name>migration-demo</l7:Name>
                 </l7:Folder>
             </l7:Resource>
         </l7:Item>
         <l7:Item>
             <l7:Name>sample api</l7:Name>
-            <l7:Id>3a8b3080d27c18e68d3b48ce223f6f12</l7:Id>
+            <l7:Id>fc15349f7ea56c3d5f0fca3662500cc4</l7:Id>
             <l7:Type>SERVICE</l7:Type>
             <l7:Resource>
-                <l7:Service id="3a8b3080d27c18e68d3b48ce223f6f12">
-                    <l7:ServiceDetail folderId="3a8b3080d27c18e68d3b48ce223f6f11" id="3a8b3080d27c18e68d3b48ce223f6f12">
+                <l7:Service id="fc15349f7ea56c3d5f0fca3662500cc4">
+                    <l7:ServiceDetail folderId="fc15349f7ea56c3d5f0fca3662500cc3" id="fc15349f7ea56c3d5f0fca3662500cc4">
                         <l7:Name>sample api</l7:Name>
                         <l7:Enabled>true</l7:Enabled>
                         <l7:ServiceMappings>
@@ -56,7 +56,9 @@
             &lt;L7p:CounterName stringValue="PRESET(a5bdbcb59b144e01)${request.authenticateduser}"/&gt;
         &lt;/L7p:RateLimit&gt;
         &lt;L7p:HttpRoutingAssertion&gt;
-            &lt;L7p:ProtectedServiceUrl stringValue="https://mas:443/backend_service"/&gt;
+            &lt;L7p:ProtectedServiceUrl stringValue="https://localhost:443/backend_service"/&gt;
+            &lt;L7p:ProxyPassword stringValueNull="null"/&gt;
+            &lt;L7p:ProxyUsername stringValueNull="null"/&gt;
             &lt;L7p:RequestHeaderRules httpPassthroughRuleSet="included"&gt;
                 &lt;L7p:ForwardAll booleanValue="true"/&gt;
                 &lt;L7p:Rules httpPassthroughRules="included"&gt;
@@ -93,7 +95,7 @@
     </l7:References>
     <l7:Mappings>
         <l7:Mapping action="NewOrExisting" srcId="0000000000000000ffffffffffffec76" type="FOLDER"/>
-        <l7:Mapping action="NewOrUpdate" srcId="3a8b3080d27c18e68d3b48ce223f6f11" type="FOLDER"/>
-        <l7:Mapping action="NewOrUpdate" srcId="3a8b3080d27c18e68d3b48ce223f6f12" type="SERVICE"/>
+        <l7:Mapping action="NewOrUpdate" srcId="fc15349f7ea56c3d5f0fca3662500cc3" type="FOLDER"/>
+        <l7:Mapping action="NewOrUpdate" srcId="fc15349f7ea56c3d5f0fca3662500cc4" type="SERVICE"/>
     </l7:Mappings>
 </l7:Bundle>
