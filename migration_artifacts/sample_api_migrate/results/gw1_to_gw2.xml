@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<l7:Item xmlns:l7="http://ns.l7tech.com/2010/04/gateway-management">
+    <l7:Name>Bundle mappings</l7:Name>
+    <l7:Type>BUNDLE MAPPINGS</l7:Type>
+    <l7:TimeStamp>2019-01-30T08:39:14.135-06:00</l7:TimeStamp>
+    <l7:Link rel="self" uri="https://172.31.15.119:8443/restman/1.0/bundle?test=true&amp;activate=true"/>
+    <l7:Resource>
+        <l7:Mappings>
+            <l7:Mapping action="NewOrExisting" actionTaken="UsedExisting" srcId="0000000000000000ffffffffffffec76" targetId="0000000000000000ffffffffffffec76" targetUri="https://172.31.15.119:8443/restman/1.0/folders/0000000000000000ffffffffffffec76" type="FOLDER"/>
+            <l7:Mapping action="NewOrUpdate" actionTaken="CreatedNew" srcId="fc15349f7ea56c3d5f0fca3662500cc3" targetId="fc15349f7ea56c3d5f0fca3662500cc3" targetUri="https://172.31.15.119:8443/restman/1.0/folders/fc15349f7ea56c3d5f0fca3662500cc3" type="FOLDER"/>
+            <l7:Mapping action="NewOrUpdate" actionTaken="CreatedNew" srcId="fc15349f7ea56c3d5f0fca3662500cc4" targetId="fc15349f7ea56c3d5f0fca3662500cc4" targetUri="https://172.31.15.119:8443/restman/1.0/services/fc15349f7ea56c3d5f0fca3662500cc4" type="SERVICE"/>
+        </l7:Mappings>
+    </l7:Resource>
+</l7:Item>
