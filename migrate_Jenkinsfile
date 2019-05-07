@@ -8,22 +8,22 @@ stages {
     }
     stage('Migrate Folder: migration-demo') {
         steps {
-            sh '/var/lib/jenkins/workspace/MoveToDev/migration_artifacts/GatewayMigrationUtility.sh migrateOut -z /var/lib/jenkins/workspace/MoveToDev/migration_artifacts/sample_api_migrate/gw-1/argfiles/cloud.gateway.properties --dest /var/lib/jenkins/workspace/MoveToDev/migration_artifacts/sample_api_migrate/gw-1/bundles/gw1.out.migration-demo.xml --folderName /migration-demo'
+            sh '/var/lib/jenkins/workspace/MigrateGW1_GW2/migration_artifacts/GatewayMigrationUtility.sh migrateOut -z /var/lib/jenkins/workspace/MigrateGW1_GW2/migration_artifacts/sample_api_migrate/gw-1/argfiles/cloud.gateway.properties --dest /var/lib/jenkins/workspace/MigrateGW1_GW2/migration_artifacts/sample_api_migrate/gw-1/bundles/gw1.out.migration-demo.xml --folderName /migration-demo'
         }
     }
     stage('Template Output Bundle') {
         steps {
-            sh '/var/lib/jenkins/workspace/MoveToDev/migration_artifacts/GatewayMigrationUtility.sh template --bundle /var/lib/jenkins/workspace/MoveToDev/migration_artifacts/sample_api_migrate/gw-1/bundles/gw1.out.migration-demo.xml --template /var/lib/jenkins/workspace/MoveToDev/migration_artifacts/sample_api_migrate/gw-1/env_properties/gw1.migration-demo.properties'
+            sh '/var/lib/jenkins/workspace/MigrateGW1_GW2/migration_artifacts/GatewayMigrationUtility.sh template --bundle /var/lib/jenkins/workspace/MigrateGW1_GW2/migration_artifacts/sample_api_migrate/gw-1/bundles/gw1.out.migration-demo.xml --template /var/lib/jenkins/workspace/MigrateGW1_GW2/migration_artifacts/sample_api_migrate/gw-1/env_properties/gw1.migration-demo.properties'
         }
     }
     stage('Manage Mappings') {
         steps {
-            sh '/var/lib/jenkins/workspace/MoveToDev/migration_artifacts/GatewayMigrationUtility.sh manageMappings --bundle /var/lib/jenkins/workspace/MoveToDev/migration_artifacts/sample_api_migrate/gw-1/bundles/gw1.out.migration-demo.xml --type SSG_KEY_ENTRY --action IGNORE --outputFile /var/lib/jenkins/workspace/MoveToDev/migration_artifacts/sample_api_migrate/gw-1/mappings/gw1.gw2.migration-demo.mappings.xml'
+            sh '/var/lib/jenkins/workspace/MigrateGW1_GW2/migration_artifacts/GatewayMigrationUtility.sh manageMappings --bundle /var/lib/jenkins/workspace/MigrateGW1_GW2/migration_artifacts/sample_api_migrate/gw-1/bundles/gw1.out.migration-demo.xml --type SSG_KEY_ENTRY --action IGNORE --outputFile /var/lib/jenkins/workspace/MigrateGW1_GW2/migration_artifacts/sample_api_migrate/gw-1/mappings/gw1.gw2.migration-demo.mappings.xml'
         }
     }
     stage('Migrate --> GW2') {
         steps {
-            sh '/var/lib/jenkins/workspace/MoveToDev/migration_artifacts/GatewayMigrationUtility.sh migrateIn -z /var/lib/jenkins/workspace/MoveToDev/migration_artifacts/sample_api_migrate/gw-2/argfiles/mag.gateway.properties --template /var/lib/jenkins/workspace/MoveToDev/migration_artifacts/sample_api_migrate/gw-2/env_properties/gw2.migration-demo.properties --bundle /var/lib/jenkins/workspace/MoveToDev/migration_artifacts/sample_api_migrate/gw-1/bundles/gw1.out.migration-demo.xml --map /var/lib/jenkins/workspace/MoveToDev/migration_artifacts/sample_api_migrate/gw-2/mappings/gw1.gw2.migration-demo.mappings.xml --test'
+            sh '/var/lib/jenkins/workspace/MigrateGW1_GW2/migration_artifacts/GatewayMigrationUtility.sh migrateIn -z /var/lib/jenkins/workspace/MigrateGW1_GW2/migration_artifacts/sample_api_migrate/gw-2/argfiles/mag.gateway.properties --template /var/lib/jenkins/workspace/MigrateGW1_GW2/migration_artifacts/sample_api_migrate/gw-2/env_properties/gw2.migration-demo.properties --bundle /var/lib/jenkins/workspace/MigrateGW1_GW2/migration_artifacts/sample_api_migrate/gw-1/bundles/gw1.out.migration-demo.xml --map /var/lib/jenkins/workspace/MigrateGW1_GW2/migration_artifacts/sample_api_migrate/gw-2/mappings/gw1.gw2.migration-demo.mappings.xml'
         }
     }
 }
