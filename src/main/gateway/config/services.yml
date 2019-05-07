@@ -1,9 +1,0 @@
-migration-demo/sample api:
-  url: "/sample_api"
-  policy: "migration-demo/sample api.xml"
-  httpMethods:
-  - "DELETE"
-  - "POST"
-  - "GET"
-  - "PUT"
-  properties: {}
