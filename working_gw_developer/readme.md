@@ -49,5 +49,5 @@ of the MIT license. See the [LICENSE][license-link] file for details.
 # Migrate bundle into Enterprise Mainline using Gateway Migration Utility
 This demo flow continues with the API developer migrating into Dev/QA pipeline (v9.3 SSG) using [GMU][gmu-readme]
 
- [gmu-readme]: /GMU_Artifacts/readme.md
-### [GMU README](/GMU_Artifacts/readme.md)
+ [gmu-readme]: ../migration_artifacts/readme.md
+### [GMU README](../migration_artifacts/readme.md)
